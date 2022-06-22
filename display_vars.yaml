@@ -1,7 +1,10 @@
 ---
 - hosts: all
   vars: 
-  - msg: "{{INPUT1|default('No Message')}}"
+  - msg1: "{{INPUT1|default('No Message')}}"
+  - msg2: "{{INPUT2|default('No Message')}}"
   tasks:
   - name: Print Input1
-    debug: var=msg
+    debug: var=msg1
+  - name: Print Input2
+    debug: var=msg2
