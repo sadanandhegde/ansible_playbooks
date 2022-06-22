@@ -1,0 +1,16 @@
+- name: ping servers
+  hosts: servers
+  gather_facts: false
+  tasks:
+    - ping:
+
+- name: display inputs
+  hosts: servers
+  vars:
+  - msg1: "{{INPUT1|default('No Message')}}"
+  - msg2: "{{INPUT2|default('No Message')}}"
+  tasks:
+  - name: Print INPUT1
+    debug: var=msg1
+  - name: Print INPUT2
+    debug: var=msg2    
