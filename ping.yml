@@ -1,4 +1,4 @@
-- hosts: server
+- hosts: servers
   gather_facts: false
   tasks:
     - ping:
