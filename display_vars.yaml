@@ -1,7 +1,7 @@
 ---
 - hosts: all
   vars: 
-  - msg: "{{Input1|default('No Message')}}"
+  - msg: "{{INPUT1|default('No Message')}}"
   tasks:
   - name: Print Input1
     debug: var=msg
